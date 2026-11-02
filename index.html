@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tessel — Design-led engineering studio</title>
+    <meta name="description" content="Tessel is a design-led engineering studio. We design and build websites, products and brands that hold up in production." />
+    <script>
+      // Apply the saved mode + Theme Studio palette before first paint (no flash).
+      try {
+        var t = localStorage.getItem('tessel-mode')
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = t
+        var css = localStorage.getItem('tessel-studio-css')
+        if (css) {
+          var s = document.createElement('style')
+          s.id = 'studio-vars'
+          s.textContent = css
+          document.head.appendChild(s)
+        }
+      } catch (e) {}
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300..700&family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
