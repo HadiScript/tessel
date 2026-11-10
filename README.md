@@ -1,6 +1,7 @@
 # Tessel — Design-led engineering studio
 
 A concept website for **Tessel**, a design and engineering studio. Pill navigation, pinned project scenes, a word-scrambling "Design that ___" section and a scroll-driven gallery.
+**Live demo:** https://hadiscript.github.io/tessel/
 
 **Stack:** React 19 · TypeScript · Vite · GSAP + ScrollTrigger · Lenis
 
