@@ -3104,3 +3104,31 @@ button:hover .roll::after {
     transition: none !important;
   }
 }
+
+/* ================= touch: bigger tap areas, same look ================= */
+/* small icon buttons and text links get an invisible 44px-ish hit area on phones */
+@media (pointer: coarse), (max-width: 900px) {
+  .mode-switch,
+  .studio-btn,
+  .menu-btn,
+  .vo-btn,
+  .ct-social a,
+  .ct-foot button,
+  .kit-live {
+    position: relative;
+  }
+  .mode-switch::before,
+  .studio-btn::before,
+  .menu-btn::before,
+  .vo-btn::before,
+  .ct-foot button::before,
+  .kit-live::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+  }
+  .ct-social a {
+    display: inline-block;
+    padding: 10px 0;
+  }
+}
